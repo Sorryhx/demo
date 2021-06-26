@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片并排</title>
+</head>
+<style>
+:root{
+    --interval: 5px
+}
+* {
+  box-sizing: border-box;
+}
+body{
+    background-color: #ededed;
+}
+.content {
+    width: 1200px;
+    padding: var(--interval);
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content .image {
+    float: left;
+    width: 33.33%;
+    padding: var(--interval);
+}
+.content::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+img {
+    object-fit: cover;
+    width: 100%;
+}
+</style>
+<body>
+    <div class="content">
+        <div class="image">
+            <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.3dmgame.com%2Fuploads%2Fimages2%2Fnews%2F20191009%2F1570596990_947100.jpg&refer=http%3A%2F%2Fimg.3dmgame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1627140302&t=7597d8c992a3b8e137ddb895f6bb8f7b">
+        </div>
+        <div class="image">
+            <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.3dmgame.com%2Fuploads%2Fimages2%2Fnews%2F20191009%2F1570596990_947100.jpg&refer=http%3A%2F%2Fimg.3dmgame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1627140302&t=7597d8c992a3b8e137ddb895f6bb8f7b">
+        </div>
+        <div class="image">
+            <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.3dmgame.com%2Fuploads%2Fimages2%2Fnews%2F20191009%2F1570596990_947100.jpg&refer=http%3A%2F%2Fimg.3dmgame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1627140302&t=7597d8c992a3b8e137ddb895f6bb8f7b">
+        </div>
+    </div>
+</body>
+</html>

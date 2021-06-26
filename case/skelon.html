@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+:root{
+    --loading-grey: #ededed
+}
+body{
+    background-color: #f6f7f6;
+    font-family: Helvetica;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+}
+.card {
+    width: 320px;
+    border-radius: 6px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, .12)
+}
+.image{
+    height: 200px;
+}
+.image img{
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    display: block;
+}
+.content {
+    padding: 2rem 1.8rem;
+}
+h4{
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+.desc{
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+.loading .image,
+.loading h4,
+.loading .desc {
+    /* background-color: var(--loading-grey); */
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, .5) 50%,
+        rgba(255, 255, 255, 0) 100%
+    ) var(--loading-grey);
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: 1s loading ease-in-out infinite
+}
+@keyframes loading {
+    to {
+        background-position-x: -20%;
+    }
+}
+.loading h4 {
+    min-height: 1.7rem;
+    border-radius: 4px;
+    animation-delay: .05s;
+}
+.loading .desc {
+    min-height: 5rem;
+    border-radius: 4px;
+    animation-delay: .06s;
+}
+</style>
+<body>
+    <div class="card">
+        <div class="image">
+            <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.3dmgame.com%2Fuploads%2Fimages2%2Fnews%2F20191009%2F1570596990_947100.jpg&refer=http%3A%2F%2Fimg.3dmgame.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1627140302&t=7597d8c992a3b8e137ddb895f6bb8f7b">
+        </div>
+        <div class="content">
+            <h4>我爱写代码</h4>
+            <div class="desc">
+                学习使我快乐，爱情让我悲伤。想要法拉利，想要钱人民币。辣台妹，辣台妹，辣台妹。当我遇见你，闪烁的灯光里。舞步飞行，双眼迷离。
+            </div>
+        </div>
+    </div>
+
+    <div class="card loading">
+        <div class="image">
+        </div>
+        <div class="content">
+            <h4></h4>
+            <div class="desc">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+</script>
+</html>
